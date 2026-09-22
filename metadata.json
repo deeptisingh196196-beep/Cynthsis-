@@ -1,0 +1,6 @@
+{
+  "name": "Cynthsis",
+  "description": "Intelligent voice & knowledge synthesis with AI photo and video generation.",
+  "requestFramePermissions": ["microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

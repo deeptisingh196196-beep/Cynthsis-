@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c12"/>
+      <stop offset="50%" stop-color="#111420"/>
+      <stop offset="100%" stop-color="#07080d"/>
+    </linearGradient>
+
+    <!-- Blue Star Gradients -->
+    <linearGradient id="blueStarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="25%" stop-color="#3b82f6"/>
+      <stop offset="70%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <linearGradient id="blueStarCore" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+
+    <!-- 4 Squares Subtle Tones -->
+    <linearGradient id="sqPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+    <linearGradient id="sqCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="sqEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="sqRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+
+    <!-- Glowing Shadows -->
+    <filter id="blueGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="24" result="blur1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- App Rounded Base Frame -->
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <rect width="504" height="504" x="4" y="4" rx="112" fill="none" stroke="#2563eb" stroke-opacity="0.3" stroke-width="4"/>
+
+  <!-- Outer Luminous Blue Halo -->
+  <circle cx="256" cy="256" r="160" fill="#2563eb" opacity="0.18" filter="url(#blueGlow)"/>
+
+  <!-- 4 Distinctive Functional Squares in Background -->
+  <!-- 1. Photo (Top Left - Purple) -->
+  <rect x="120" y="120" width="116" height="116" rx="28" fill="url(#sqPurple)" opacity="0.88"/>
+  <!-- 2. Video (Top Right - Cyan) -->
+  <rect x="276" y="120" width="116" height="116" rx="28" fill="url(#sqCyan)" opacity="0.88"/>
+  <!-- 3. Gallery (Bottom Left - Emerald) -->
+  <rect x="120" y="276" width="116" height="116" rx="28" fill="url(#sqEmerald)" opacity="0.88"/>
+  <!-- 4. Camera (Bottom Right - Rose) -->
+  <rect x="276" y="276" width="116" height="116" rx="28" fill="url(#sqRose)" opacity="0.88"/>
+
+  <!-- Inner Dark Glass Backdrop behind Star -->
+  <circle cx="256" cy="256" r="102" fill="#0b0d14" stroke="#3b82f6" stroke-width="3" stroke-opacity="0.6" filter="url(#softGlow)"/>
+
+  <!-- THE BLUE STAR (नीले रंग का चमकता हुआ स्टार) -->
+  <!-- Outer glowing blue star layer -->
+  <polygon
+    points="256,164 282,223 346,228 298,272 312,335 256,301 200,335 214,272 166,228 230,223"
+    fill="url(#blueStarGrad)"
+    stroke="#60a5fa"
+    stroke-width="3"
+    stroke-linejoin="round"
+    filter="url(#blueGlow)"
+  />
+
+  <!-- High-contrast inner faceted Blue Star -->
+  <polygon
+    points="256,172 278,225 336,230 292,268 305,324 256,294 207,324 220,268 176,230 234,225"
+    fill="url(#blueStarGrad)"
+    stroke="#bfdbfe"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+
+  <!-- Star Highlight Facets -->
+  <polygon points="256,172 256,294 278,225" fill="#93c5fd" opacity="0.7"/>
+  <polygon points="256,294 336,230 292,268" fill="#3b82f6" opacity="0.6"/>
+  <polygon points="256,294 305,324 256,294" fill="#1d4ed8" opacity="0.6"/>
+  <polygon points="256,172 256,294 234,225" fill="#dbeafe" opacity="0.9"/>
+  <polygon points="256,294 176,230 220,268" fill="#60a5fa" opacity="0.7"/>
+
+  <!-- Center Diamond Sparkle -->
+  <circle cx="256" cy="256" r="16" fill="url(#blueStarCore)" filter="url(#softGlow)"/>
+  <circle cx="256" cy="256" r="8" fill="#ffffff"/>
+
+  <!-- "100% FREE" Badge on bottom border -->
+  <g transform="translate(256, 452)">
+    <rect x="-85" y="-18" width="170" height="30" rx="15" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="1">100% FREE APP</text>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+{
+  "id": "/",
+  "name": "Cynthsis - AI Knowledge & Media Hub",
+  "short_name": "Cynthsis",
+  "description": "Intelligent voice & knowledge synthesis with AI photo, video, and gallery vision.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0c0d10",
+  "theme_color": "#0c0d10",
+  "orientation": "portrait-primary",
+  "lang": "hi",
+  "categories": ["productivity", "utilities", "photo"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "गैलरी से पूछें",
+      "short_name": "गैलरी",
+      "description": "फ़ोन की गैलरी से तस्वीरें चुनें और AI से पूछें",
+      "url": "/?open=gallery",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "AI फोटो बनाएं",
+      "short_name": "फोटो",
+      "description": "नई AI तस्वीरें बनाएं",
+      "url": "/?open=photo",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    }
+  ]
+}
